@@ -1,7 +1,7 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import {useAuthStore} from '../store/useAuthStore.ts';
+import {useAuthStore} from '../store/useAuthStore';
 import {Link, useNavigate} from 'react-router';
 import {Button} from '@mui/material';
 

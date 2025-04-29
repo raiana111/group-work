@@ -1,4 +1,4 @@
-import {useAuthStore} from '../store/useAuthStore.ts';
+import {useAuthStore} from '../store/useAuthStore';
 
 export const Home = () => {
  const store = useAuthStore()

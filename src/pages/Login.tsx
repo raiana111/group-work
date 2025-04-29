@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {Container, TextField, Button, Box, Typography, Paper, Alert} from '@mui/material';
 import axiosApi from '../AxiosApi.ts';
-import { useAuthStore } from '../store/useAuthStore.ts';
+import { useAuthStore } from '../store/useAuthStore.tsx';
 import { useNavigate } from 'react-router';
 import { IAuth } from '../types.ts';
 
