@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Container, TextField, Button, Typography, Paper } from '@mui/material';
 import axiosApi from '../AxiosApi';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Container, TextField, Button, Typography, Paper } from '@mui/material';
 
 export const EditCategory = () => {
   const { id } = useParams<{ id: string }>();
@@ -20,6 +20,16 @@ export const EditCategory = () => {
       navigate('/categories');
     } catch {
       setError('Ошибка редактирования категории');
+    }
+  };
+
+
+  const handleDelete = async () => {
+    try {
+      await axiosApi.delete(`/categories/${id}/`);
+      navigate('/categories');  
+    } catch {
+      setError('Ошибка удаления категории');
     }
   };
 
@@ -47,6 +57,15 @@ export const EditCategory = () => {
             Save
           </Button>
         </form>
+        <Button
+          variant="contained"
+          color="error"
+          onClick={handleDelete}
+          fullWidth
+          sx={{ mt: 3 }}
+        >
+          Delete Category
+        </Button>
       </Paper>
     </Container>
   );
