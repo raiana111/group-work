@@ -5,7 +5,7 @@ import { Register } from './pages/Register.tsx';
 import { Home } from './pages/Home.tsx';
 import { CreatePost } from './pages/CreatePost.tsx';
 import { PostsList } from './pages/PostsList';
-import { PostDetails } from './pages/PostDetail.tsx';
+import { PostDetail } from './pages/PostDetail.tsx';
 import { CategoriesList } from './pages/CategoriesList';
 import { CreateCategory } from './pages/CreateCategory';
 import { EditCategory } from './pages/EditCategory';
@@ -23,7 +23,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/posts" element={<PostsList />} />
-        <Route path="/posts/:id" element={<PostDetails />} />
+        <Route path="/posts/:id" element={<PostDetail />} />
         <Route path="/categories" element={<CategoriesList />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/create-post" element={<CreatePost />} />
